@@ -1,0 +1,8 @@
+<view class='indexContainer'>
+  <image class='avatarUrl' src="/static/images/nvsheng.jpg"></image>
+  <text class='userName'>大帅哥</text>
+
+  <view class='goStudy'>
+  <text>Hello,world</text>
+  </view>
+</view>

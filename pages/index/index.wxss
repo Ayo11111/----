@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #bfa;
+  background-color: #fa8072;
   height: 100%;
 }
 

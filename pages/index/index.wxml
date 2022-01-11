@@ -1,6 +1,15 @@
+<!--
+ * @Descripttion: 
+ * @Company: 思宏科技
+ * @version: v1.0
+ * @Author: LuoJie
+ * @Date: 2022-01-11 09:07:50
+ * @LastEditors: LuoJie
+ * @LastEditTime: 2022-01-11 09:15:14
+-->
 <view class='indexContainer'>
   <image class='avatarUrl' src="/static/images/nvsheng.jpg"></image>
-  <text class='userName'>大帅哥</text>
+  <text class='userName'>{{msg}}</text>
 
   <view class='goStudy'>
   <text>Hello,world</text>

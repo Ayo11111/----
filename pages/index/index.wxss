@@ -14,6 +14,11 @@
   margin: 100rpx 0;
 }
 
+button {
+  background: pink;
+  margin-top: 100rpx;
+}
+
 .userName {
   font-size: 32rpx;
   margin: 100rpx 0;
@@ -26,5 +31,6 @@
   font-size: 28rpx;
   text-align: center;
   border: 1rpx solid #333;
+  margin:50px 0;
   border-radius: 10rpx;
 }

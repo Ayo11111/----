@@ -8,8 +8,12 @@
  * @LastEditTime: 2022-01-11 09:15:14
 -->
 <view class='indexContainer'>
-  <image class='avatarUrl' src="/static/images/nvsheng.jpg"></image>
-  <text class='userName'>{{msg}}</text>
+  <image wx:if="{{userInfo.avatarUrl}}" class='avatarUrl' src="{{userInfo.avatarUrl}}"></image>
+  <button size="mini"  wx:else bindtap="getUserProfile">获取用户信息</button>
+  <text class='userName'>{{userInfo.nickName}}</text>
+
+  <!-- <button bindgetuserinfo="handleGetUsersInfo" open-type="getUserInfo">获取用户信息</button> -->
+  
 
   <!-- <view class='goStudy' bindtap="handleParent">
   <text catchtap="handleChild">Hello,world</text>

@@ -13,7 +13,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    msg: '咕咕唧唧'
+    msg: '咕咕唧唧',
+    userInfo: {} //用户的基本数据
   },
 
 
@@ -29,7 +30,7 @@ Page({
     //   url: "/pages/logs/logs",
     // })
 
-    
+
     // 不保留跳转前页面
     // wx.reLaunch({
     //   url: "/pages/logs/logs",
@@ -44,6 +45,26 @@ Page({
     console.log('222')
   },
 
+  // 获取用户信息的打印
+  getUserProfile() {
+    wx.getUserProfile({
+      desc: '测试',
+      lang: 'zh_CN',
+      success: (res) => {
+        this.setData({
+          userInfo: res.userInfo
+        })
+        try {
+          wx.setStorageSync('userInfo', res.userInfo)
+        } catch (e) { console.log(e); }
+      },
+      fail: (error) => {
+        console.log(error)
+      }
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -55,6 +76,16 @@ Page({
     // console.log(this.data.msg) //因为底层没有实现数据代理，所以需要this.data才能取到data中的数据
 
     console.log('onLoad()');
+  
+    try {
+     let userInfo = wx.getStorageSync('userInfo')
+     this.setData({
+       userInfo:userInfo
+     })
+    } catch (error) {
+      console.log(error);
+    }
+
   },
 
   /**

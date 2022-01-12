@@ -1,2 +1,2 @@
 <!--pages/logs/logs.wxml-->
-<text>pages/logs/logs.wxml</text>
+<image class="imageStyle" src="/static/dahama.jpg"></image>

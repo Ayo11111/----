@@ -20,6 +20,6 @@
   </view> -->
 
   <view class='goStudy' bindtap="toLogs">
-  <text>Hello,world</text>
+  <text>点击出现大蛤蟆</text>
   </view>
 </view>
